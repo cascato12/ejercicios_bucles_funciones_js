@@ -1,10 +1,8 @@
-Ejercicio 12
+/*Ejercicio 12
 
 Desarrolla una función que busque en un array de objetos representando mutantes si existe alguno con un poder específico y retorne un mensaje indicando si fue encontrado o no.
 
-Considera el caso de múltiples mutantes con el mismo poder.
-
-
+Considera el caso de múltiples mutantes con el mismo poder.*/
 
 const mutants = [
   { name: 'Wolverine', power: 'regeneration' },
@@ -17,7 +15,7 @@ const mutants = [
   { name: 'Beast', power: 'superhuman strength' },
   { name: 'Colossus', power: 'steel skin' },
   { name: 'Nightcrawler', power: 'teleportation' }
-];
+]
 
 function findMutantByPower(mutants, power) {
   // insert code

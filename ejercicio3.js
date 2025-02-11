@@ -1,8 +1,8 @@
-Ejercicio 3
+/*Ejercicio 3
 
 Filtra una lista de canciones para crear una playlist que solo contenga canciones de rock que duren más de 5 minutos.
 
-Utiliza un bucle para lograrlo e imprime la nueva playlist por consola.
+Utiliza un bucle para lograrlo e imprime la nueva playlist por consola.*/
 
 const songs = [
   { title: 'Bohemian Rhapsody', genre: 'Rock', duration: 5.55 },
@@ -15,9 +15,16 @@ const songs = [
   { title: 'Wish You Were Here', genre: 'Rock', duration: 5.34 },
   { title: 'Black Dog', genre: 'Rock', duration: 4.54 },
   { title: 'Thunderstruck', genre: 'Rock', duration: 4.52 },
-  { title: 'Crazy Love', genre: 'Pop', duration: 3.52 },
-];
-const rockPlaylist = [];
+  { title: 'Crazy Love', genre: 'Pop', duration: 3.52 }
+]
+const rockPlaylist = []
 
 // Añade tu código de bucle aquí
+for (let i = 0; i < songs.length; i++) {
+  if (songs[i].genre === 'Rock' && songs[i].duration > 5) {
+    rockPlaylist.push(songs[i])
+  }
+}
 
+console.log('Playlist de Rock (más de 5 minutos):')
+console.log(rockPlaylist)

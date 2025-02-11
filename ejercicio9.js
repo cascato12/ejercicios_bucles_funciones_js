@@ -1,10 +1,8 @@
-Ejercicio 9
+/*Ejercicio 9
 
 Crea una función que reciba un array de objetos representando a varios miembros de los X-Men y su año de aparición. La función debe retornar el miembro más antiguo.
 
-Utiliza este array para probar tu función.
-
-
+Utiliza este array para probar tu función.*/
 
 const xMen = [
   { name: 'Wolverine', year: 1974 },
@@ -17,7 +15,7 @@ const xMen = [
   { name: 'Magneto', year: 1963 },
   { name: 'Professor X', year: 1963 },
   { name: 'Mystique', year: 1978 }
-];
+]
 
 function findOldestXMen(xMen) {
   // insert code

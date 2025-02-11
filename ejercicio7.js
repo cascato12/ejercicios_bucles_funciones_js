@@ -1,8 +1,8 @@
-Ejercicio 7
+/*Ejercicio 7
 
 Dada una lista de canciones, clasifícalas en un objeto donde las claves sean los géneros y los valores sean arrays de canciones de ese género.
 
-Utiliza bucles para estructurar este objeto e imprime el resultado por consola.
+Utiliza bucles para estructurar este objeto e imprime el resultado por consola.*/
 
 const tracks = [
   { title: 'Enter Sandman', genre: 'Metal' },
@@ -15,6 +15,19 @@ const tracks = [
   { title: 'Thunderstruck', genre: 'Rock' },
   { title: 'Hotel California', genre: 'Rock' },
   { title: 'Stairway to Heaven', genre: 'Rock' }
-];
+]
 
 // Añade tu código de bucle aquí
+let tracksByGenre = {}
+
+for (let i = 0; i < tracks.length; i++) {
+  let genre = tracks[i].genre
+
+  if (!tracksByGenre[genre]) {
+    tracksByGenre[genre] = []
+  }
+
+  tracksByGenre[genre].push(tracks[i].title)
+}
+
+console.log(tracksByGenre)

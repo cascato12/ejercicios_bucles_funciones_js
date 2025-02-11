@@ -1,8 +1,8 @@
-Ejercicio 4
+/*Ejercicio 4
 
 Utiliza un bucle para encontrar la serie de dibujos animados más antigua en el array y guarda su nombre en una variable.
 
-Imprime el nombre por consola.
+Imprime el nombre por consola.*/
 
 const cartoons = [
   { name: 'Mickey Mouse', debut: 1928 },
@@ -15,6 +15,15 @@ const cartoons = [
   { name: 'The Simpsons', debut: 1989 },
   { name: 'Pokémon', debut: 1997 },
   { name: "Dexter's Laboratory", debut: 1996 }
-];
+]
 
 // Añade tu código de bucle aquí
+let oldestCartoon = cartoons[0]
+
+for (let i = 1; i < cartoons.length; i++) {
+  if (cartoons[i].debut < oldestCartoon.debut) {
+    oldestCartoon = cartoons[i]
+  }
+}
+
+console.log(oldestCartoon.name)
