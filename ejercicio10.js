@@ -20,5 +20,14 @@ const capitals = {
 }
 
 function getCapital(country) {
-  // insert code
+  if (capitals.hasOwnProperty(country)) {
+    return capitals[country]
+  } else {
+    return `El país "${country}" no está en la lista.`
+  }
 }
+
+// Pruebas
+console.log(getCapital('Spain')) // Madrid
+console.log(getCapital('France')) // Paris
+console.log(getCapital('Chile')) // El país "Argentina" no está en la lista.

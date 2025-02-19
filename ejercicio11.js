@@ -20,5 +20,15 @@ const movies = [
 ]
 
 function averageMovieDuration(movies) {
-  // insert code
+  if (movies.length === 0) return 0
+  const totalDuration = movies.reduce((sum, movie) => sum + movie.duration, 0)
+  const average = totalDuration / movies.length
+  return average
 }
+
+const averageDuration = averageMovieDuration(movies)
+console.log(
+  `El promedio de duración de las películas es: ${averageDuration.toFixed(
+    2
+  )} minutos`
+)

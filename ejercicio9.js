@@ -18,5 +18,18 @@ const xMen = [
 ]
 
 function findOldestXMen(xMen) {
-  // insert code
+  if (xMen.length === 0) return null
+
+  let oldest = xMen[0]
+
+  for (let i = 1; i < xMen.length; i++) {
+    if (xMen[i].year < oldest.year) {
+      oldest = xMen[i]
+    }
+  }
+
+  return oldest
 }
+
+const oldestXMen = findOldestXMen(xMen)
+console.log(oldestXMen)

@@ -18,5 +18,16 @@ const mutants = [
 ]
 
 function findMutantByPower(mutants, power) {
-  // insert code
+  const foundMutants = mutants.filter((mutant) => mutant.power === power)
+  if (foundMutants.length > 0) {
+    const names = foundMutants.map((mutant) => mutant.name).join(', ')
+    return `Los siguientes mutantes tienen el poder "${power}": ${names}.`
+  } else {
+    return `No se encontraron mutantes con el poder "${power}".`
+  }
 }
+
+// Pruebas
+console.log(findMutantByPower(mutants, 'telekinesis')) // Los siguientes mutantes tienen el poder "telekinesis": Jean Grey.
+console.log(findMutantByPower(mutants, 'magnetism')) // Los siguientes mutantes tienen el poder "magnetism": Magneto.
+console.log(findMutantByPower(mutants, 'invisibility')) // No se encontraron mutantes con el poder "invisibility".
